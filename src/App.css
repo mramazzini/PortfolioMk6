@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #root {
-  overflow: hidden;
-  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,10 +46,6 @@
   z-index: 0;
 }
 
-.static-image:hover {
-  opacity: 0;
-}
-
 @keyframes wobble {
   0% {
     transform: rotate(-5deg);
@@ -43,6 +58,288 @@
   }
 }
 
-.icon:hover {
+.icon-nav:hover {
   animation: wobble 0.5s ease-in-out infinite;
+}
+
+.container {
+  width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  position: relative;
+  font-size: 16px;
+  border-radius: 0.5em;
+  background-color: #21242b;
+  border-bottom: 10px solid #18f98f;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px #18f98f;
+}
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #18f98f;
+}
+.container:active {
+  transform: scale(1);
+  box-shadow: 0 0 10px #18f98f;
+}
+i {
+  color: #18f98f;
+  font-size: 2.5em;
+  text-align: center;
+}
+span.num {
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+.wrapper {
+  width: 80vw;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+span.text {
+  color: #e0e0e0;
+  font-size: 1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 85vw;
+  }
+  .container {
+    height: 26vmin;
+    width: 26vmin;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .container {
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 15px;
+  }
+  .container {
+    width: 100%;
+    height: 25vmin;
+    font-size: 8px;
+  }
+}
+.corner-ribbon {
+  width: 3px;
+  border-radius: 5px;
+  background: #18f98f;
+  position: relative;
+  text-align: center;
+  margin: 30px auto;
+  box-shadow: 0 0 3px #18f98f;
+}
+.corner-ribbon.top-right::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 3px;
+  height: 100%;
+  background: #18f98f;
+  box-shadow: 0 0 3px #18f98f;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.corner-ribbon.top-left::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 3px;
+  height: 100%;
+  background: #18f98f;
+  box-shadow: 0 0 3px #18f98f;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+}
+.stack::-webkit-scrollbar {
+  display: none;
+}
+.corner-ribbon.bottom-right::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 3px;
+  height: 100%;
+  background: #18f98f;
+  box-shadow: 0 0 3px #18f98f;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+}
+
+.corner-ribbon.bottom-left::after {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 3px;
+  height: 100%;
+  background: #18f98f;
+  box-shadow: 0 0 3px #18f98f;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+.callToAction {
+  background-color: #18f98f;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px #18f98f;
+  margin: 10px;
+}
+
+.callToAction:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #18f98f;
+}
+
+.callToAction:active {
+  transform: scale(1);
+  box-shadow: 0 0 10px #18f98f;
+}
+
+.stack-icon:hover {
+  animation: wobble 0.5s ease-in-out infinite;
+  box-shadow: 0 0 20px 10px #18f98f;
+  background-color: #18f98f;
+  border-radius: 50%;
+  overflow: visible;
+}
+.hexagon-container {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.icon {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  animation: slide-in-hex 0.5s ease-in-out forwards;
+}
+.hexagon {
+  opacity: 1;
+  height: 100%;
+  background-color: #18f98f;
+  display: inline-block;
+  width: calc(100% * 0.57735);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+.hexagon-background {
+  height: 75px;
+  background-color: var(--greenColorNormal);
+  display: inline-block;
+  width: calc(75px * 0.57735);
+
+  z-index: 0;
+}
+.h-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #18f98f;
+  margin: 10px 0;
+}
+.hexagon-background::after {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  top: 0;
+  transform: rotateZ(-60deg);
+  width: inherit;
+  z-index: -1;
+}
+.hexagon-background::before {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  transform: rotateZ(60deg);
+  width: inherit;
+  z-index: -1;
+}
+.hexagon::after {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  top: 0;
+  transform: rotateZ(-60deg);
+  width: inherit;
+  z-index: 0;
+}
+.hexagon:before {
+  background-color: inherit;
+  content: "";
+  height: inherit;
+  position: absolute;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  top: 0;
+  transform: rotateZ(60deg);
+  width: inherit;
+}
+
+.icon-image {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  top: 12.5px;
+  right: 3px;
+  overflow: visible;
+}
+
+.icon-image#speedometer {
+  background: url(./assets/speedometer.png);
+  background-size: cover;
+}
+.icon-image#responsive {
+  background: url(./assets/responsive.png);
+
+  overflow: visible;
+  background-size: cover;
+}
+.icon-image#bulb {
+  background: url(./assets/bulb.png);
+  background-size: cover;
 }

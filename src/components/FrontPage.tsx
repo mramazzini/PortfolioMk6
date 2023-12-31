@@ -1,11 +1,15 @@
 import Banner from "./Banner";
+import Intro from "./Intro";
 import Slider from "./Slider";
+import Stats from "./Stats";
+
 const FrontPage = () => {
   return (
-    <div className="bg-black w-full h-screen text-white">
-      <Slider top={true} />
+    <div className=" w-full  ">
       <Banner />
-      <Slider top={false} />
+
+      <Intro />
+      <Stats />
     </div>
   );
 };

@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import code from "../assets/code.png";
-import pull from "../assets/pull.png";
-import commit from "../assets/commit.png";
-import repo from "../assets/repo.png";
+
 import Icon from "./Icon";
 import TechStack from "./TechStack";
 const data = {

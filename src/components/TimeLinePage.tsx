@@ -5,7 +5,7 @@ import Icon from "./Icon";
 import Godot from "../assets/Godot.png";
 const TimeLinePage = () => {
   return (
-    <div className="m-20 justify-center text-white items-center flex flex-col">
+    <div className="lg:m-20 justify-center text-white items-center flex flex-col">
       <div className="projectsHeader ">
         <h1 className="text-5xl font-bold text-center ">
           Featured Projects
@@ -13,7 +13,7 @@ const TimeLinePage = () => {
         </h1>
       </div>
 
-      <div className="timeLineContainer flex flex-col justify-evenly items-center  w-3/4">
+      <div className="timeLineContainer flex flex-col justify-evenly items-center p-5 w-full lg:w-3/4">
         <FeaturedProject
           image={builder}
           swap={false}

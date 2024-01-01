@@ -166,12 +166,7 @@ const Stats = () => {
             }}
           ></div>
 
-          <div
-            className="flex flex-col justify-start p-8 items-start w-1/3"
-            style={{
-              display: document.getElementById("pie-chart") ? "flex" : "none",
-            }}
-          >
+          <div className="hidden flex-col justify-start p-8 items-start w-1/3  lg:flex">
             <div className="header flex flex-row items-start w-full ">
               <h1 className="text-3xl font-bold w-full text-center mb-8">
                 My work is...

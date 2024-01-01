@@ -8,7 +8,7 @@ const Contact = () => {
         </h1>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <p className="text-xl text-center py-5">
+        <p className="text-xl text-center py-5 lg:px-0 px-5">
           I'm currently looking for new opportunities, my inbox is always open
           at{" "}
           <a

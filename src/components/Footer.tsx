@@ -2,7 +2,7 @@ import pixelHeart from "../assets/pixelHeart.png";
 const Footer = () => {
   return (
     <div
-      className="w-full mt-5 justify-center items-start flex"
+      className="w-full my-5 justify-center items-start flex"
       style={{
         height: "15vh",
       }}

@@ -61,7 +61,7 @@ const Stats = () => {
       className="w-full px-5 lg:px-0 justify-center items-center flex-col flex  lg:mt-10"
     >
       <div className="stats-header m-5 lg:m-20">
-        <h1 className="text-5xl font-bold text-center ">Stats</h1>
+        <h1 className="text-5xl font-bold text-center p-5 ">Stats</h1>
         <div className="h-divider" style={{ backgroundColor: "#18f98f" }}></div>
       </div>
       <div className="wrapper">

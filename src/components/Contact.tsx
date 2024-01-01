@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div className="w-full justify-start items-center">
       <div className="header flex flex-col justify-center items-center ">
-        <h1 className="text-5xl font-bold text-center ">
+        <h1 className="text-5xl font-bold text-center p-5 ">
           Contact
           <div className="h-divider" />
         </h1>

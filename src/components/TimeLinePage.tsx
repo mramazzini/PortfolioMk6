@@ -7,7 +7,7 @@ const TimeLinePage = () => {
   return (
     <div className="lg:m-20 justify-center text-white items-center flex flex-col">
       <div className="projectsHeader ">
-        <h1 className="text-5xl font-bold text-center ">
+        <h1 className="text-5xl p-5 font-bold text-center ">
           Featured Projects
           <div className="h-divider" />
         </h1>

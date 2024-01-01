@@ -1,7 +1,7 @@
 const FeaturedProject = (props: any) => {
   return props.swap || window.innerWidth <= 1024 ? (
     <div
-      className="project w-full flex flex-col  lg:flex-row justify-center items-start m-5 "
+      className="project w-full flex flex-col  lg:flex-row justify-center items-center m-5 "
       style={{
         backgroundColor: "#21242b",
         borderRadius: "10px",
@@ -23,7 +23,7 @@ const FeaturedProject = (props: any) => {
     </div>
   ) : (
     <div
-      className="project w-full  flex flex-col lg:flex-row justify-center items-start m-5  grow"
+      className="project w-full  flex flex-col lg:flex-row justify-center items-center m-5  grow"
       style={{
         backgroundColor: "#21242b",
         borderRadius: "10px",

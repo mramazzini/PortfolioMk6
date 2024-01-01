@@ -6,6 +6,17 @@ import commit from "../assets/commit.png";
 import repo from "../assets/repo.png";
 import pull from "../assets/pull.png";
 import code from "../assets/code.png";
+import apollo from "../assets/apollo.png";
+import aws from "../assets/aws.png";
+import cpp from "../assets/c++.png";
+
+import godot from "../assets/godot.png";
+import javascript from "../assets/javascript.png";
+import electron from "../assets/electron.png";
+import mongo from "../assets/mongo.png";
+import node from "../assets/node.png";
+import react from "../assets/react.png";
+import typescript from "../assets/typescript.png";
 
 const Icon = ({
   data,
@@ -19,7 +30,7 @@ const Icon = ({
     <a
       href={data.link}
       target="_blank"
-      className="w-12 h-12 mx-5 icon-nav flex justify-center items-center"
+      className="w-8 h-8 md:w-12 md:h-12 mx-5 icon-nav flex justify-center items-center"
     >
       <img
         src={
@@ -37,11 +48,31 @@ const Icon = ({
             ? repo
             : data.name === "pull"
             ? pull
-            : code
+            : data.name === "code"
+            ? code
+            : data.name === "apollo"
+            ? apollo
+            : data.name === "aws"
+            ? aws
+            : data.name === "c++"
+            ? cpp
+            : data.name === "electron"
+            ? electron
+            : data.name === "godot"
+            ? godot
+            : data.name === "javascript"
+            ? javascript
+            : data.name === "mongodb"
+            ? mongo
+            : data.name === "node"
+            ? node
+            : data.name === "react"
+            ? react
+            : data.name === "typescript"
+            ? typescript
+            : ""
         }
         alt={data.name}
-        width="48"
-        height="48"
       />
     </a>
   );

@@ -151,7 +151,7 @@ span.text {
   background: #18f98f;
   position: relative;
   text-align: center;
-  margin: 30px auto;
+
   box-shadow: 0 0 3px #18f98f;
 }
 .corner-ribbon.top-right::after {
@@ -342,4 +342,13 @@ span.text {
 .icon-image#bulb {
   background: url(./assets/bulb.png);
   background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
 }

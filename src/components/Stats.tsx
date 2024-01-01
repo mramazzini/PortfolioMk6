@@ -61,9 +61,9 @@ const Stats = () => {
   return (
     <div
       id="tech"
-      className="w-full justify-center items-center flex-col flex mt-10"
+      className="w-full px-5 lg:px-0 justify-center items-center flex-col flex  lg:mt-10"
     >
-      <div className="stats-header m-20">
+      <div className="stats-header m-5 lg:m-20">
         <h1 className="text-5xl font-bold text-center ">Stats</h1>
         <div className="h-divider" style={{ backgroundColor: "#18f98f" }}></div>
       </div>
@@ -102,26 +102,24 @@ const Stats = () => {
         </div>
       </div>
       <div
-        className="w-4/5 relative flex justify-start flex-col items-start mt-10 rounded-xl "
+        className="w-full lg:w-3/4  relative flex justify-start flex-col lg:flex-row  items-start mt-10 rounded-xl "
         style={{
           backgroundColor: "#21242b",
           borderBottom: "10px solid #18f98f",
         }}
       >
-        <div className="header flex flex-row items-center w-full py-8">
-          <h1 className="text-3xl font-bold w-1/3 text-center ">
-            Top Languages
-          </h1>
-          <h1 className="text-3xl font-bold w-1/3 text-center ">Tech Stack</h1>
-          <h1 className="text-3xl font-bold w-1/3 text-center ">My work...</h1>
-        </div>
-        <div className="flex-row flex w-full">
+        <div className="flex-col lg:flex-row flex w-full">
           <div
-            className="flex flex-col justify-start p-8 items-start w-1/3"
+            className="flex flex-col justify-center p-4 lg:p-8 items-start w-full lg:w-1/3 lg:justify-start"
             style={{
               display: document.getElementById("pie-chart") ? "flex" : "none",
             }}
           >
+            <div className="header flex flex-row items-start w-full ">
+              <h1 className="text-3xl font-bold w-full text-center ">
+                Top Languages
+              </h1>
+            </div>
             <img
               id="pie-chart"
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=mramazzini&langs_count=7&title_color=ffffff&layout=pie&hide_title=true&text_color=ffffff&icon_color=0891b2&bg_color=21242b&hide_border=true&locale=en&custom_title=Top%20%Languages"
@@ -134,37 +132,51 @@ const Stats = () => {
                 objectPosition: "center",
               }}
             />
+            <div className="h-divider lg:hidden flex" />
           </div>
           <div
-            className="divider "
+            className="lg:flex divider hidden"
             style={{
               backgroundColor: "#18f98f",
               width: "1px",
               height: "600px",
             }}
           ></div>
+
           <div
-            className="flex flex-col justify-start p-8 items-start w-1/3 "
+            className="flex flex-col justify-start p-4 lg:p-8 items-start w-full lg:w-1/3"
             style={{
               display: document.getElementById("pie-chart") ? "flex" : "none",
             }}
           >
+            <div className="header flex flex-row items-start w-full pb-5">
+              <h1 className="text-3xl font-bold w-full text-center ">
+                Tech Stack
+              </h1>
+            </div>
             <TechStack />
+            <div className="h-divider lg:hidden flex" />
           </div>
           <div
-            className="divider "
+            className="lg:flex divider hidden"
             style={{
               backgroundColor: "#18f98f",
               width: "1px",
               height: "600px",
             }}
           ></div>
+
           <div
             className="flex flex-col justify-start p-8 items-start w-1/3"
             style={{
               display: document.getElementById("pie-chart") ? "flex" : "none",
             }}
           >
+            <div className="header flex flex-row items-start w-full ">
+              <h1 className="text-3xl font-bold w-full text-center mb-8">
+                My work is...
+              </h1>
+            </div>
             <div className="hexes h-full w-full flex-col flex justify-start">
               <div className="h-1/3 w-full">
                 <div className="row flex flex-row items-center justify-evenly w-full">
@@ -177,7 +189,7 @@ const Stats = () => {
                       </div>
                     </div>
                   </div>
-                  <h1 className="text-5xl font-bold w-full text-center ">
+                  <h1 className="text-4xl font-bold w-full text-center ">
                     Responsive
                   </h1>
                 </div>
@@ -193,7 +205,7 @@ const Stats = () => {
                       </div>
                     </div>
                   </div>
-                  <h1 className="text-5xl font-bold w-full text-center ">
+                  <h1 className="text-4xl font-bold w-full text-center ">
                     Efficient
                   </h1>
                 </div>
@@ -209,7 +221,7 @@ const Stats = () => {
                       </div>
                     </div>
                   </div>
-                  <h1 className="text-5xl font-bold w-full text-center ">
+                  <h1 className="text-4xl font-bold w-full text-center ">
                     Intuitive
                   </h1>
                 </div>

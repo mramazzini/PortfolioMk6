@@ -12,7 +12,7 @@ const FeaturedProject = (props: any) => {
       <div className="textContainer w-1/3 h-full flex flex-col p-5 justify-start items-center">
         {props.children}
       </div>
-      <div className="imgContainer w-2/3 flex flex-col justify-center items-center">
+      <div className="imgContainer w-2/3 flex flex-col justify-center items-center grow">
         <img
           className="p-5 h-auto w-full object-cover"
           style={{
@@ -25,7 +25,7 @@ const FeaturedProject = (props: any) => {
     </div>
   ) : (
     <div
-      className="project w-full  flex flex-row justify-center items-start m-5 "
+      className="project w-full  flex flex-row justify-center items-start m-5  grow"
       style={{
         backgroundColor: "#21242b",
         borderRadius: "10px",
@@ -41,7 +41,7 @@ const FeaturedProject = (props: any) => {
           alt={props.alt}
         />
       </div>
-      <div className="textContainer w-1/3 h-full flex flex-col p-5 justify-start items-center">
+      <div className="textContainer w-1/3 h-full flex flex-col p-5 justify-start items-center grow">
         {props.children}
       </div>
     </div>

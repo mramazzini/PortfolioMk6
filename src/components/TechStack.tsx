@@ -4,7 +4,7 @@ const TechStack = () => {
       className="stack flex flex-wrap 
     flex-row justify-center items-center w-full "
       style={{
-        maxHeight: "600px",
+        maxHeight: document.getElementById("pie-chart") ? "50vh" : "100vh",
         overflowY: "scroll",
       }}
     >

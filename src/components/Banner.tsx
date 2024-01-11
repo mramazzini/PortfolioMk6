@@ -15,7 +15,7 @@ const icons = [
   },
   {
     name: "resume",
-    link: "https://drive.google.com/file/d/1D5h7P6TcH8y5f5W5HcQgj6g7y3rYh1d6/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1TsAVw6lPuoclyKHi8pZoanUarLQcXCP1/view?usp=sharing",
   },
 ];
 
@@ -32,7 +32,7 @@ const Banner = () => {
 
   return (
     <div
-      id="banner"
+      id='banner'
       className={`text-white w-full justify-center items-center flex flex-col fixed py-4 overflow-hidden fixed top-0  z-10`}
       style={{
         height: (1 / 12) * window.innerHeight,

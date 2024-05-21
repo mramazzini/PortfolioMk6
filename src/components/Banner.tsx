@@ -15,7 +15,7 @@ const icons = [
   },
   {
     name: "resume",
-    link: "https://drive.google.com/file/d/1TsAVw6lPuoclyKHi8pZoanUarLQcXCP1/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1GzolUu6uWojxxMBLk54rBFocY9vMNerr/view?usp=sharing",
   },
 ];
 

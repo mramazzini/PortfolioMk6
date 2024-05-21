@@ -3,17 +3,56 @@ import builder from "../assets/builder.png";
 import edu from "../assets/edu.png";
 import Icon from "./Icon";
 import Godot from "../assets/Godot.png";
+import Stats from "./Stats";
+import BlazingBuilds from "../assets/BlazingBuilds.png";
 const TimeLinePage = () => {
   return (
     <div className="lg:m-20 justify-center text-white items-center flex flex-col">
+      <Stats />
       <div className="projectsHeader ">
-        <h1 className="text-5xl p-5 font-bold text-center ">
+        <h1 className="text-5xl p-5 font-bold text-center mt-5">
           Featured Projects
           <div className="h-divider" />
         </h1>
       </div>
 
       <div className="timeLineContainer flex flex-col justify-evenly items-center p-5 w-full lg:w-3/4">
+        <FeaturedProject
+          swap={true}
+          image={BlazingBuilds}
+          alt="Blazing Builds LLC"
+        >
+          <div className="header flex flex-col justify-center items-start w-full">
+            <h1 className="text-3xl font-bold text-center ">
+              Blazing Builds LLC
+              <div className="h-divider" />
+            </h1>
+          </div>
+          <p className="text-xl text-left py-5">
+            A website for a custom PC building company.
+          </p>
+          <div className="  flex flex-row justify-center items-start w-full mb-5">
+            <Icon data={{ name: "react", link: "" }} />
+            <Icon data={{ name: "node", link: "" }} />
+            <Icon data={{ name: "mongodb", link: "" }} />
+            <Icon data={{ name: "apollo", link: "" }} />
+          </div>
+          <a
+            href="https://blazingbuilds.com"
+            className="py-2 pr-2 source-code items-end bg-black/20 justify-end flex h-full rounded-xl hover:bg-black/30 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            style={{
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+            }}
+          >
+            <Icon data={{ name: "github", link: "" }} />
+            <h1
+              className="m-2 text-lg font-bold 
+            "
+            >
+              Take Me There
+            </h1>
+          </a>
+        </FeaturedProject>
         <FeaturedProject
           image={builder}
           swap={false}
